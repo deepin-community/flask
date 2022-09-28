@@ -1,0 +1,22 @@
+Description: Remove eticalads in doc
+ This causes FTBFS, so I'm removing it.
+Author: Thomas Goirand <zigo@debian.org>
+Forwarded: no
+Last-Update: 2021-09-19
+
+--- flask-2.0.1.orig/docs/conf.py
++++ flask-2.0.1/docs/conf.py
+@@ -47,10 +47,10 @@ html_context = {
+     ]
+ }
+ html_sidebars = {
+-    "index": ["project.html", "localtoc.html", "searchbox.html", "ethicalads.html"],
+-    "**": ["localtoc.html", "relations.html", "searchbox.html", "ethicalads.html"],
++    "index": ["project.html", "localtoc.html", "searchbox.html"],
++    "**": ["localtoc.html", "relations.html", "searchbox.html"],
+ }
+-singlehtml_sidebars = {"index": ["project.html", "localtoc.html", "ethicalads.html"]}
++singlehtml_sidebars = {"index": ["project.html", "localtoc.html"]}
+ html_static_path = ["_static"]
+ html_favicon = "_static/flask-icon.png"
+ html_logo = "_static/flask-icon.png"
