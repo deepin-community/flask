@@ -3,6 +3,7 @@ Section: python
 Priority: optional
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders:
+ Thomas Goirand <zigo@debian.org>,
  Ondřej Nový <onovy@debian.org>,
 Build-Depends:
  debhelper-compat (= 13),
@@ -10,18 +11,19 @@ Build-Depends:
  python3-all,
  python3-asgiref,
  python3-blinker,
- python3-click,
+ python3-click (>= 8.0),
  python3-dotenv,
  python3-itsdangerous (>= 2.0),
  python3-jinja2 (>= 3.0),
  python3-pallets-sphinx-themes,
  python3-pytest (>= 3),
+ python3-tomli,
  python3-setuptools,
  python3-sphinx,
  python3-sphinx-issues,
  python3-sphinx-tabs,
- python3-werkzeug (>= 2.0),
-Standards-Version: 4.5.0
+ python3-werkzeug (>= 2.2.2),
+Standards-Version: 4.6.1
 Vcs-Git: https://salsa.debian.org/python-team/packages/flask.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/flask
 Homepage: http://flask.pocoo.org/
@@ -36,11 +38,11 @@ Depends:
 Recommends:
  python3-asgiref,
  python3-blinker,
- python3-click,
+ python3-click (>= 8.0),
  python3-dotenv,
  python3-itsdangerous (>= 2.0),
  python3-pkg-resources,
- python3-werkzeug (>= 2.0),
+ python3-werkzeug (>= 2.2.2),
 Suggests:
  python-flask-doc,
 Description: micro web framework based on Werkzeug and Jinja2 - Python 3.x

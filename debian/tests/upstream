@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+pyvers=$(py3versions -r 2>/dev/null)
+
+cp -a CHANGES.rst tests "$AUTOPKGTEST_TMP"
+cd "$AUTOPKGTEST_TMP"
+
+export LC_ALL=C.UTF-8
+export http_proxy=''
+
+PYTEST_MATCH="not test_main_module_paths"
+for py in ${pyvers}; do
+  echo "-=-=-=-=-=-=-=- running tests for ${py} -=-=-=-=-=-=-=-=-"
+  printf '$ %s\n' "${py} -m pytest -k \"${PYTEST_MATCH}\" tests"
+  ${py} -m pytest -k "${PYTEST_MATCH}" tests
+done
