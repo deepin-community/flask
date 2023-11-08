@@ -1,0 +1,9 @@
+Tests: upstream
+Depends:
+ python3-all,
+ python3-asgiref,
+ python3-blinker,
+ python3-dotenv,
+ python3-flask,
+ python3-pytest (>= 6.2),
+ python3-setuptools,

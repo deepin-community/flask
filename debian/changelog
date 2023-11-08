@@ -1,3 +1,62 @@
+flask (2.2.5-1) unstable; urgency=medium
+
+  * d/watch: Switch to using github tags instead of pypi.
+  * New upstream release.
+  * Remove CVE-2023-30861 patch applied upstream.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 14 Sep 2023 11:12:36 +0200
+
+flask (2.2.2-3) unstable; urgency=high
+
+  * CVE-2023-30861: Flask vulnerable to possible disclosure of permanent
+    session cookie due to missing Vary: Cookie header. Applied upstream patch:
+    set Vary: Cookie header consistently for session (Closes: #1035670).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 11 May 2023 12:39:19 +0200
+
+flask (2.2.2-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 30 Nov 2022 14:02:11 +0100
+
+flask (2.2.2-1) experimental; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+
+  [ Thomas Goirand ]
+  * Team upload.
+  * New upstream release.
+  * Add myself as uploader.
+  * Fixed (build-)depends for this release.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Sep 2022 10:21:40 +0200
+
+flask (2.0.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 2.0.3
+  * d/p/426a1e25b77e760b4f54bf94aee3e3617850569f.patch: Remove.
+  * Bump watch version from 3 to 4
+  * Bump Standards-Version to 4.6.1.
+
+ -- Gabriela Pivetta <gpivetta99@gmail.com>  Wed, 20 Jul 2022 07:20:35 -0300
+
+flask (2.0.1-4) unstable; urgency=medium
+
+  * Team upload.
+  * [e10f738] run upstream tests as autopkgtest
+
+ -- Joseph Nahmias <jello@debian.org>  Tue, 19 Jul 2022 17:46:19 -0400
+
+flask (2.0.1-3) unstable; urgency=medium
+
+  * debian/patches/426a1e25b77e760b4f54bf94aee3e3617850569f.patch
+    - fix compat with pytest 7, part of PR #4443; Closes: #1013716
+
+ -- Sandro Tosi <morph@debian.org>  Mon, 11 Jul 2022 23:15:20 -0400
+
 flask (2.0.1-2) unstable; urgency=medium
 
   * Uploading to unstable.
