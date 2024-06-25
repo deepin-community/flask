@@ -1,0 +1,36 @@
+From: Thomas Goirand <zigo@debian.org>
+Date: Sat, 16 Dec 2023 09:10:11 +0100
+Subject: docs: Use intersphix with Debian packages
+
+Forwarded: not-needed
+---
+ docs/conf.py | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/docs/conf.py b/docs/conf.py
+index fc06a86..2b68d29 100644
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -28,14 +28,14 @@ extlinks = {
+     "pr": ("https://github.com/pallets/flask/pull/%s", "#%s"),
+ }
+ intersphinx_mapping = {
+-    "python": ("https://docs.python.org/3/", None),
+-    "werkzeug": ("https://werkzeug.palletsprojects.com/", None),
+-    "click": ("https://click.palletsprojects.com/", None),
+-    "jinja": ("https://jinja.palletsprojects.com/", None),
+-    "itsdangerous": ("https://itsdangerous.palletsprojects.com/", None),
+-    "sqlalchemy": ("https://docs.sqlalchemy.org/", None),
+-    "wtforms": ("https://wtforms.readthedocs.io/", None),
+-    "blinker": ("https://blinker.readthedocs.io/", None),
++    "python": ("/usr/share/doc/python3-doc/html", None),
++    "werkzeug": ("/usr/share/doc/python-werkzeug-doc/html", None),
++    "click": ("/usr/share/doc/python-click-doc/html", None),
++    "jinja": ("/usr/share/doc/python-jinja2-doc/html", None),
++    "itsdangerous": ("/usr/share/doc/python-itsdangerous-doc/html", None),
++    "sqlalchemy": ("/usr/share/doc/python-sqlalchemy-doc/html", None),
++    "wtforms": ("/usr/share/doc/python-wtforms-doc/html", None),
++    "blinker": ("/usr/share/doc/python-blinker-doc/html", None),
+ }
+ 
+ # HTML -----------------------------------------------------------------

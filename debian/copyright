@@ -1,18 +1,20 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Flask
-Source: https://pypi.python.org/pypi/Flask
+Source: https://github.com/pallets/flask
 
 Files: *
-Copyright: (c) 2010-2018, Pallets team and community contributors
-           (c) 2010-2018, David Lord (davidism)
-           (c) 2010-2018, Adrian Mönnich (ThiefMaster)
-           (c) 2010-2018, Armin Ronacher (mitsuhiko)
-           (c) 2010-2018, Marcus Unterwaditzer (untitaker)
+Copyright: (c) 2010-2024, Pallets team and community contributors
+           (c) 2010-2024, David Lord (davidism)
+           (c) 2010-2023, Adrian Mönnich (ThiefMaster)
+           (c) 2010-2023, Armin Ronacher (mitsuhiko)
+           (c) 2010-2023, Marcus Unterwaditzer (untitaker)
 License: BSD-3-clause
 
 Files: debian/*
 Copyright: (c) 2010-2016, Piotr Ożarowski <piotr@debian.org>
            (c) 2016-2020, Ondřej Nový <onovy@debian.org>
+		   (c) 2022, Thomas Goirand <zigo@debian.org>
+		   (c) 2023-2024, Carsten Schoenert <c.schoenert@t-online.de>
 License: BSD-3-clause
 
 License: BSD-3-clause

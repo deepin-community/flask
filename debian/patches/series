@@ -1,4 +1,4 @@
-0001-Don-t-require-sphinxcontrib.log_cabinet-extension.patch
-0002-Make-the-documentation-build-reproducibly.patch
-remove-using-intersphinx.patch
-remove-eticalads-in-doc.patch
+Don-t-require-sphinxcontrib.log_cabinet-extension.patch
+PATCH-Make-the-documentation-build-reproducibly.patch
+Remove-eticalads-in-doc.patch
+docs-Use-intersphix-with-Debian-packages.patch

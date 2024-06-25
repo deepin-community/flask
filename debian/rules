@@ -1,5 +1,13 @@
 #!/usr/bin/make -f
-	
+# -*- makefile -*-
+
+#export DH_VERBOSE = 1
+
+include /usr/share/dpkg/pkg-info.mk
+
+BUILD_DATE  = $(shell LC_ALL=C date -u "+%d %B %Y" -d "@$(SOURCE_DATE_EPOCH)")
+SPHINXOPTS := -E -N -D html_last_updated_fmt="$(BUILD_DATE)"
+
 export PYBUILD_NAME=flask
 export PYBUILD_BEFORE_TEST=cp CHANGES.rst {build_dir}
 export PYBUILD_AFTER_TEST=rm {build_dir}/CHANGES.rst
@@ -7,17 +15,19 @@ export PYBUILD_AFTER_INSTALL=rm -rf '{destdir}/{install_dir}/site_egg'
 export PYBUILD_TEST_ARGS="-k not test_main_module_paths"
 
 %:
-	dh $@ --with python3,sphinxdoc --buildsystem pybuild
+	dh $@ --buildsystem=pybuild
+
+override_dh_clean:
+	dh_clean
+	rm -rf .mypy_cache
 
 override_dh_auto_test:
 	LC_ALL=C.UTF-8 http_proxy='' dh_auto_test
 
 override_dh_sphinxdoc:
-ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
-	http_proxy='http://127.0.0.1:9/' \
-		https_proxy='http://127.0.0.1:9/' \
-		PYTHONPATH=src \
-		python3 -m sphinx -N -q -E -b html docs/ debian/python-flask-doc/usr/share/doc/python-flask-doc/html/
+ifeq (,$(findstring nodoc, $(DEB_BUILD_OPTIONS)))
+	PYTHONPATH=`dirname $$(find .pybuild/ -type d -name "flask*dist-info" | head -n1)` \
+	    python3 -m sphinx -b html docs/ $(SPHINXOPTS) debian/python-flask-doc/usr/share/doc/python-flask-doc/html/
 	dh_sphinxdoc
 	# Remove unwanted license file, we already reference d/copyright
 	rm -f $(CURDIR)/debian/python-flask-doc/usr/share/doc/python-flask-doc/html/_sources/license.rst.txt
