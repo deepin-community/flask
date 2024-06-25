@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import typing as t
-
 from flask import Flask
 from flask import Response
 
@@ -19,20 +17,16 @@ async def after_async(response: Response) -> Response:
 
 
 @app.before_request
-def before_sync() -> None:
-    ...
+def before_sync() -> None: ...
 
 
 @app.before_request
-async def before_async() -> None:
-    ...
+async def before_async() -> None: ...
 
 
 @app.teardown_appcontext
-def teardown_sync(exc: t.Optional[BaseException]) -> None:
-    ...
+def teardown_sync(exc: BaseException | None) -> None: ...
 
 
 @app.teardown_appcontext
-async def teardown_async(exc: t.Optional[BaseException]) -> None:
-    ...
+async def teardown_async(exc: BaseException | None) -> None: ...

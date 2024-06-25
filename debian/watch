@@ -1,3 +1,9 @@
 version=4
-opts="mode=git,uversionmangle=s/\.0rc/~rc/;s/\.0b1/~b1/;s/\.0b2/~b2/;s/\.0b3/~b3/" \
+
+opts="mode=git, \
+      compression=gz, \
+      uversionmangle=s/\.0rc/~rc/; \
+                     s/\.0b1/~b1/; \
+                     s/\.0b2/~b2/; \
+                     s/\.0b3/~b3/" \
 https://github.com/pallets/flask.git refs/tags/(\d[brc\d\.]+)

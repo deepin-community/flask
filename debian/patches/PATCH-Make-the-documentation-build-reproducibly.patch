@@ -1,7 +1,8 @@
-From 3ddf7fd2c2b4108a55213c791bd80981bd1f90f5 Mon Sep 17 00:00:00 2001
 From: Chris Lamb <lamby@debian.org>
 Date: Mon, 28 Oct 2019 09:13:37 +0000
 Subject: [PATCH] Make the documentation build reproducibly
+
+From 3ddf7fd2c2b4108a55213c791bd80981bd1f90f5 Mon Sep 17 00:00:00 2001
 Origin: https://github.com/pallets/flask/pull/3408/commits/3ddf7fd2c2b4108a55213c791bd80981bd1f90f5
 
 Whilst working on the Reproducible Builds effort [0] we noticed that
@@ -21,10 +22,10 @@ This commit skips this (inherited) member from the documentation.
  docs/api.rst | 1 +
  1 file changed, 1 insertion(+)
 
-Index: flask/docs/api.rst
-===================================================================
---- flask.orig/docs/api.rst
-+++ flask/docs/api.rst
+diff --git a/docs/api.rst b/docs/api.rst
+index 1aa8048..ccbbef9 100644
+--- a/docs/api.rst
++++ b/docs/api.rst
 @@ -22,6 +22,7 @@ Blueprint Objects
  .. autoclass:: Blueprint
     :members:

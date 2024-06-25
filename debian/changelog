@@ -1,3 +1,73 @@
+flask (3.0.3-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Ondřej Nový ]
+  * Remove myself from Uploaders.
+
+  [ Carsten Schoenert ]
+  * [055d043] New upstream version 3.0.3
+  * [411725a] Rebuild patch queue drom patch-queue branch
+    Adjusted/refreshed patch:
+    Don-t-require-sphinxcontrib.log_cabinet-extension.patch
+  * [eed4cbc] d/rules: Add override_dh_clean
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Fri, 12 Apr 2024 08:13:46 +0200
+
+flask (3.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Upload to unstable
+  * New upstream version 3.0.2
+  * [1ac9117] d/copyright: Update year data
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Sat, 10 Feb 2024 07:51:40 +0100
+
+flask (3.0.1-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream version 3.0.1
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Tue, 23 Jan 2024 19:48:13 +0100
+
+flask (3.0.0-1) experimental; urgency=medium
+
+  * Team upload
+  * [65d9c5b] d/gbp.conf: Add some basic defaults for git-buildpackage
+  * [9905535] d/watch: Add compression type and improve readability
+  * [c716c54] d/gbp.conf: Adjust to branch debian/experimental
+  * [9f8663f] New upstream version 3.0.0
+    (Closes: #901448, #1056247, #1058304)
+  * [8482b3e] Rebuild patch queue drom patch-queue branch
+    Added patch:
+    docs-Use-intersphix-with-Debian-packages.patch
+    Renamed patches:
+    0001-Don-t-require-sphinxcontrib.log_cabinet-extension.patch
+     -> Don-t-require-sphinxcontrib.log_cabinet-extension.patch
+    0002-Make-the-documentation-build-reproducibly.patch
+     -> PATCH-Make-the-documentation-build-reproducibly.patch
+    remove-eticalads-in-doc.patch
+     -> Remove-eticalads-in-doc.patch
+    Removed patch:
+    remove-using-intersphinx.patch
+  * [ddc7c5e] d/control: Bump Standards-Version to 4.6.2
+    No further changes needed.
+  * [d010060] d/control: Update B-D as upstream has moved to flit
+  * [c9f535f] d/control: Adjust related B-D and add BuildProfileSpecs
+  * [9e93261] d/rules: Drop --with option in default target
+  * [fc84f5e] d/rules: Improve build of Sphinx based documentation
+  * [3bbfe4e] autopkgtest: Clean up test dependencies
+    Remove mostly all of the previous set dependencies, we only need the
+    pytest packages, all other deps need to get pulled automatically, if not
+    than this is a issue in the python3-flask package.
+  * [b0bd5d8] d/copyright: Update content and copyright holders
+  * [b3d91e7] d/u/metadata: Small updates
+  * [fe64378] d/control: Reflect GitHub project website as Homepage
+  * [97d4a02] d/.salsa-ci.yml: Adding trigger file for Salsa CI
+  * [11a587d] d/README.source: Adding a README file about source specifics
+
+ -- Carsten Schoenert <c.schoenert@t-online.de>  Thu, 21 Dec 2023 07:22:23 +0100
+
 flask (2.2.5-1) unstable; urgency=medium
 
   * d/watch: Switch to using github tags instead of pypi.

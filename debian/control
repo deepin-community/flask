@@ -4,29 +4,35 @@ Priority: optional
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders:
  Thomas Goirand <zigo@debian.org>,
- Ondřej Nový <onovy@debian.org>,
 Build-Depends:
  debhelper-compat (= 13),
- dh-python (>= 2.20160609~),
+ dh-sequence-python3,
+ dh-sequence-sphinxdoc,
+ flit,
+ pybuild-plugin-pyproject,
+ python-blinker-doc <!nodoc>,
+ python-click-doc <!nodoc>,
+ python-itsdangerous-doc <!nodoc>,
+ python-jinja2-doc <!nodoc>,
+ python-sqlalchemy-doc <!nodoc>,
+ python-werkzeug-doc <!nodoc>,
+ python-wtforms-doc <!nodoc>,
  python3-all,
- python3-asgiref,
- python3-blinker,
- python3-click (>= 8.0),
- python3-dotenv,
- python3-itsdangerous (>= 2.0),
- python3-jinja2 (>= 3.0),
- python3-pallets-sphinx-themes,
- python3-pytest (>= 3),
- python3-tomli,
- python3-setuptools,
- python3-sphinx,
- python3-sphinx-issues,
- python3-sphinx-tabs,
- python3-werkzeug (>= 2.2.2),
-Standards-Version: 4.6.1
+ python3-blinker (>= 1.6.2) <!nocheck !nodoc>,
+ python3-click (>= 8.1.3) <!nocheck !nodoc>,
+ python3-doc <!nodoc>,
+ python3-itsdangerous (>= 2.1.2) <!nocheck !nodoc>,
+ python3-jinja2 <!nocheck>,
+ python3-pallets-sphinx-themes <!nodoc>,
+ python3-pytest (>= 7.4) <!nocheck>,
+ python3-sphinx <!nodoc>,
+ python3-sphinx-issues <!nodoc>,
+ python3-sphinx-tabs <!nodoc>,
+ python3-werkzeug (>= 3.0.1) <!nocheck>,
+Standards-Version: 4.6.2
 Vcs-Git: https://salsa.debian.org/python-team/packages/flask.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/flask
-Homepage: http://flask.pocoo.org/
+Homepage: https://github.com/pallets/flask
 Testsuite: autopkgtest-pkg-python
 Rules-Requires-Root: no
 
