@@ -1,3 +1,14 @@
+flask (3.0.3-1deepin1) unstable; urgency=medium
+
+  * Fix CVE-2026-27205: Mark session as accessed for operations like
+    'in' operator  Backport of upstream commit
+    089cb86dd22bff589a4eafb7ab8e42dc357623b4. This fixes a cache
+    poisoning vulnerability where Flask failed to set the Vary: Cookie
+    header when session was accessed using operations like the 'in'
+    operator, potentially leading to information disclosure.
+
+ -- deepin-ci-robot <packages@deepin.org>  Fri, 08 May 2026 00:01:01 +0800
+
 flask (3.0.3-1) unstable; urgency=medium
 
   * Team upload
