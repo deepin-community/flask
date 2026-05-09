@@ -2,3 +2,4 @@ Don-t-require-sphinxcontrib.log_cabinet-extension.patch
 PATCH-Make-the-documentation-build-reproducibly.patch
 Remove-eticalads-in-doc.patch
 docs-Use-intersphix-with-Debian-packages.patch
+CVE-2026-27205.patch
